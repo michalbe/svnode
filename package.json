@@ -16,6 +16,7 @@
     "precommit-hook": "^3.0.0"
   },
   "dependencies": {
-    "inquirer": "^0.11.0"
+    "inquirer": "^0.11.0",
+    "svn-interface": "^0.4.6"
   }
 }
