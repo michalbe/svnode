@@ -2,7 +2,8 @@
 ;(function() {
   var inquirer = require('inquirer');
   var svnode = {
-    status: require('./lib/status')
+    status: require('./lib/status'),
+    commit: require('./lib/commit')
   };
 
   var showMenu = function(){
@@ -23,6 +24,9 @@
       switch (answers.action) {
         case 'Status':
           svnode.status(showMenu);
+          break;
+        case 'Commit':
+          svnode.commit(showMenu);
           break;
         case 'Quit':
           process.exit();
