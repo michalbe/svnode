@@ -1,9 +1,11 @@
+#!/usr/bin/env node
+
 'use strict';
 ;(function() {
   var inquirer = require('inquirer');
   var svnode = {
-    status: require('./lib/status'),
-    commit: require('./lib/commit')
+    status: require('../lib/status'),
+    commit: require('../lib/commit')
   };
 
   var showMenu = function(){
@@ -14,8 +16,8 @@
       message: 'SVN actions',
       choices: [
         'Status',
-        'Blame',
-        'Log',
+        // 'Blame',
+        // 'Log',
         'Commit',
         new inquirer.Separator(),
         'Quit'
@@ -29,6 +31,7 @@
           svnode.commit(showMenu);
           break;
         case 'Quit':
+          // This thing clears the screen
           console.log('\u001b[2J\u001b[0;0H');
           process.exit();
           break;
@@ -36,8 +39,6 @@
     });
   };
 
-  // Clear screen
   console.log('\u001b[2J\u001b[0;0H');
   showMenu();
-
 })();
