@@ -1,10 +1,14 @@
 {
   "name": "svnode",
-  "version": "0.0.1",
+  "version": "0.5.1",
   "author": "Michał Budzyński <michal@virtualdesign.pl>",
   "repository": "git@github.com:michalbe/svnode.git",
   "scripts": {
     "lint": "node node_modules/jshint/bin/jshint ."
+  },
+  "license": "MIT",
+  "bin": {
+    "svnode": "./bin/cli.js"
   },
   "pre-commit": [
     "lint",
