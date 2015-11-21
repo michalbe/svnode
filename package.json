@@ -14,5 +14,8 @@
   "devDependencies": {
     "jshint": "^2.8.0",
     "precommit-hook": "^3.0.0"
+  },
+  "dependencies": {
+    "inquirer": "^0.11.0"
   }
 }
