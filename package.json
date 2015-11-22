@@ -1,6 +1,6 @@
 {
   "name": "svnode",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "author": "Michał Budzyński <michal@virtualdesign.pl>",
   "repository": "git@github.com:michalbe/svnode.git",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "cli-color": "^1.1.0",
-    "inquirer": "git+ssh://git@github.com/SBoudrias/Inquirer.js.git",
+    "inquirer": "git+https://github.com/SBoudrias/Inquirer.js.git",
     "svn-interface": "^0.4.6"
   }
 }
