@@ -5,7 +5,8 @@
   var inquirer = require('inquirer');
   var svnode = {
     status: require('../lib/status'),
-    commit: require('../lib/commit')
+    commit: require('../lib/commit'),
+    log: require('../lib/log')
   };
 
   var showMenu = function(){
@@ -17,7 +18,7 @@
       choices: [
         'Status',
         // 'Blame',
-        // 'Log',
+        'Log',
         'Commit',
         new inquirer.Separator(),
         'Quit'
@@ -26,6 +27,9 @@
       switch (answers.action) {
         case 'Status':
           svnode.status(showMenu);
+          break;
+        case 'Log':
+          svnode.log(showMenu);
           break;
         case 'Commit':
           svnode.commit(showMenu);
